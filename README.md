@@ -25,3 +25,6 @@ Adafruit_ADXL343 accel = Adafruit_ADXL343(0x53, &Wire1); # Address (first arg) d
 # BLECombo
 This one required a little digging.  I started off using the [ESP32-BLE-Keyboard](https://github.com/T-vK/ESP32-BLE-Keyboard) and [ESP32-BLE-Mouse](https://github.com/T-vK/ESP32-BLE-Mouse) libraries by [T-vK](https://github.com/T-vK), but found that they don't both work in the same sketch.  Then I came across this issue: [Support mouse and keyboard profile](https://github.com/T-vK/ESP32-BLE-Keyboard/issues/172) and I ended up using the [ESP32-BLE-Combo](https://github.com/Georgegipa/ESP32-BLE-Combo) library that does both. There is a more recent fork from [alexz006](https://github.com/alexz006/ESP32-BLE-Combo), but I haven't had any problems with the Georgegipa fork, so I just stuck with that. 
 
+# TODO
+- [ ] Fix battery level code. I don't think it's currently accurate, but I don't know why.
+    - See this documentation: https://learn.adafruit.com/adafruit-qt-py-charger-bff/pinouts#charge-chip-and-voltage-divider-3115770 
