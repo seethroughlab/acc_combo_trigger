@@ -51,7 +51,12 @@ void loop() {
       if (bleDevice.isConnected()) {
         Keyboard.print("5");
         delay(250);
-        Mouse.click(MOUSE_LEFT);
+
+        Mouse.press(MOUSE_LEFT);
+        delay(3000);
+        Mouse.release(MOUSE_LEFT);
+
+        //Mouse.click(MOUSE_LEFT);
       }
       debounce = false;
     }
